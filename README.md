@@ -2,9 +2,18 @@
 
 This project created a foundation for future work by WPI students in music information retrieval and machine learning. A Python system was first constructed to extract variable-length features from audio files. The problem of determining song structure was then approached with both supervised and unsupervised learning algorithms.
 
-### Song Visualization
+### Dependencies
 
-<img src="/output/demo/art.jpg" alt="\"Monster\" scatterplot" width="1280" height="1000"/>
+* [librosa](https://github.com/librosa/librosa)
+* [scikit-learn](http://scikit-learn.org/)
+
+## The End Result
+
+Song Visualization of "One" by Metallica.
+
+<img src="/output/demo/art.jpg" alt="\"Monster\" scatterplot" width="1280" height="800"/>
+
+## Workflow
 
 ### The Processed Data
 
