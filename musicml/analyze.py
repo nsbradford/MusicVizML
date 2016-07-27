@@ -52,7 +52,7 @@ class Analyst(object):
     algo_classes = [
         #LinearRegression(), # "normalize" severely decreases performance
         #KNeighborsClassifier(n_neighbors=15),
-        KNeighborsClassifier(n_neighbors=5),
+        KNeighborsClassifier(n_neighbors=15),
         #SVC(kernel="rbf", C=1), # increase C to decrease regularization
         #SVC(kernel="rbf", C=10), # increase C to decrease regularization
         #SVC(kernel="rbf", C=100), # increase C to decrease regularization
@@ -78,7 +78,7 @@ class Analyst(object):
         print "Load song", song.name, "..."
         song.load()
 
-        duration_list = [1.0] #, 0.5, 1.0, 2.0]
+        duration_list = [0.10] #, 0.5, 1.0, 2.0]
         print '\nALGORITHM:', algo.__class__.__name__
         avg_results = {}
         for frame_duration in duration_list:
@@ -127,7 +127,7 @@ class Analyst(object):
             if i >= n_test_runs - n_art_graphs:
                 print i
                 if is_graph:
-                    plot_classification(song_name, algo, train_X, train_Y, test_X, test_Y, X, y)
+                    plot_classification(song_name, algo, train_X, train_Y, test_X, test_Y, X, y, isScatter=False)
                 if is_cluster:
                     run_clustering_test(train_X, test_X, train_Y, test_Y)
                 if is_elbow:

@@ -61,7 +61,7 @@ def scatterplot(verses_features, chorus_features):
 
 #==================================================================================================
 
-def plot_classification(song_name, clf, X_train, y_train, X_test, y_test, X, y):
+def plot_classification(song_name, clf, X_train, y_train, X_test, y_test, X, y, isScatter):
     """ Plot classification boundary."""
     
     color_maps_raw = """Spectral, summer, coolwarm, Wistia_r, pink_r, Set1, Set2, Set3, 
@@ -82,12 +82,12 @@ def plot_classification(song_name, clf, X_train, y_train, X_test, y_test, X, y):
         PiYG_r, YlGn_r, Blues_r, YlOrBr_r, seismic, Purples, seismic_r, RdBu, Greys,
         BuGn_r, YlOrRd, PuOr, PuBuGn, nipy_spectral, afmhot"""
     #color_maps = "".join(color_maps_raw.split()).split(',')
-    color_maps = ['RdBu'] #, 'pink']#['RdBu','gray', 'pink', 'PuBu', 'Reds', 'RdGy', 'Purples']
+    color_maps = ['gray', 'PuBu', 'RdBu'] #['RdBu','gray', 'pink', 'PuBu', 'Reds', 'RdGy', 'Purples']
 
     print "Plot classification..."
-    size = 20
+    size = 5
     alpha = 1.0
-    linewidth = 0.5
+    linewidth = 0.01
 
     h = .01
     x_min, x_max = X[:, 0].min() - .5, X[:, 0].max() + .5
@@ -113,14 +113,6 @@ def plot_classification(song_name, clf, X_train, y_train, X_test, y_test, X, y):
         else:
             Z = clf.predict_proba(np.c_[xx.ravel(), yy.ravel()])[:, 1]
 
-        # Plot also the training points and testing points
-        ax.scatter(X_train[:, 0], X_train[:, 1], s=size, lw=linewidth, c=y_train, cmap=cm_bright, 
-            alpha=alpha)
-        ax.scatter(X_test[:, 0], X_test[:, 1], s=size, lw=linewidth, c=y_test, cmap=cm_bright, 
-            alpha=alpha)
-        #ax.legend(('verses_features', 'chorus_features'))
-        ax.legend((mpatches.Rectangle((0,0),1,1,color='b'), 
-            mpatches.Rectangle((0,0),1,1,color='r')), ('Chorus', 'Verse'))
 
         # Put the result into a color plot
         Z = Z.reshape(xx.shape)
@@ -132,16 +124,27 @@ def plot_classification(song_name, clf, X_train, y_train, X_test, y_test, X, y):
         ax.set_yticks(())
         title = (song_name + '_' + color_map + '_' + clf.__class__.__name__ 
             + '_' + str(time.strftime("%Y-%m-%d_%H-%M-%S")))
-        ax.set_title(title)
-        ax.text(xx.max() - .3, yy.min() + .3, ('%.2f' % score).lstrip('0'),
-                size=15, horizontalalignment='right')
         
-        plt.xlabel('Zero Crossing Rate / Spectral Centroid') #plt.xlabel('Zero Crossing Rate')
-        plt.ylabel('Spectral Centroid')
+        if isScatter:
+            # Plot also the training points and testing points
+            ax.scatter(X_train[:, 0], X_train[:, 1], s=size, lw=linewidth, c=y_train, cmap=cm_bright, 
+                alpha=alpha)
+            ax.scatter(X_test[:, 0], X_test[:, 1], s=size, lw=linewidth, c=y_test, cmap=cm_bright, 
+                alpha=alpha)
+
+            #ax.legend(('verses_features', 'chorus_features'))
+            ax.legend((mpatches.Rectangle((0,0),1,1,color='b'), 
+                mpatches.Rectangle((0,0),1,1,color='r')), ('Chorus', 'Verse'))
+            ax.set_title(title)
+            ax.text(xx.max() - .3, yy.min() + .3, ('%.2f' % score).lstrip('0'),
+                    size=15, horizontalalignment='right')
+            
+            plt.xlabel('Zero Crossing Rate / Spectral Centroid') #plt.xlabel('Zero Crossing Rate')
+            plt.ylabel('Spectral Centroid')
 
         print "\tSaving figure..."
 
         # dpi=1200 svg for high-quality
-        plt.savefig('output/' + title  + '.png', bbox_inches='tight', format='png', dpi=300) 
+        plt.savefig('output/' + title  + '.png', bbox_inches='tight', format='png', dpi=1200) 
         #plt.cla()
         #plt.show()
