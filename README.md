@@ -7,6 +7,24 @@ This project created a foundation for future work by WPI students in music infor
 * [librosa](https://github.com/librosa/librosa)
 * [scikit-learn](http://scikit-learn.org/)
 
+### Usage
+    
+    $ python musicml.py [-h] [-l] [-s {0,1,2,3,4,5,6,7,8,9,10,11}] [-a N_ART_GRAPHS]
+                        [-p] [-g] [-c] [-e]
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      -l, --is_all_songs    Run test on all songs.
+      -s {0,1,2,3,4,5,6,7,8,9,10,11}, --song_index {0,1,2,3,4,5,6,7,8,9,10,11}
+                            Index of the song in song_library.
+      -a N_ART_GRAPHS, --n_art_graphs N_ART_GRAPHS
+                            Number of output graphs.
+      -p, --is_plot_data    Plot the raw data.
+      -g, --is_graph        Graph output.
+      -c, --is_cluster      Run clustering.
+      -e, --is_elbow        Run elbow method for KMeans clustering.
+    
+
 ## The End Result
 
 Song Visualization of "One" by Metallica.
