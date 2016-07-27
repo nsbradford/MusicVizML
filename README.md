@@ -21,4 +21,3 @@ K-nearest neighbor (K=5)
 K-means clustering algorithm:
 
 <img src="/output/demo/kmeans_monster.png" alt="K-means on \"Confutatis\"" width="400" height="400"/>
-
