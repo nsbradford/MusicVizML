@@ -82,7 +82,7 @@ def plot_classification(song_name, clf, X_train, y_train, X_test, y_test, X, y, 
         PiYG_r, YlGn_r, Blues_r, YlOrBr_r, seismic, Purples, seismic_r, RdBu, Greys,
         BuGn_r, YlOrRd, PuOr, PuBuGn, nipy_spectral, afmhot"""
     #color_maps = "".join(color_maps_raw.split()).split(',')
-    color_maps = ['gray', 'PuBu', 'RdBu'] #['RdBu','gray', 'pink', 'PuBu', 'Reds', 'RdGy', 'Purples']
+    color_maps = ['gray', 'PuBu'] #['RdBu','gray', 'pink', 'PuBu', 'Reds', 'RdGy', 'Purples']
 
     print "Plot classification..."
     size = 5
