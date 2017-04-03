@@ -29,19 +29,20 @@ This project created a foundation for future work by WPI students in music infor
 
 Song Visualization of "One" by Metallica.
 
-<img src="/output/demo/art.jpg" alt="\"Monster\" scatterplot" width="1280" height="800"/>
+<img src="/output/demo/art.jpg" alt="Monster scatterplot" width="1280" height="800"/>
+
 
 ## Workflow
 
 ### The Processed Data
 
-<img src="/output/demo/scatter__2016-04-27_12-40-10.png" alt="\"Monster\" scatterplot" width="400" height="400"/>
+<img src="/output/demo/scatter__2016-04-27_12-40-10.png" alt="Monster scatterplot" width="400" height="400"/>
 
 ### Supervised Learning
 
 K-nearest neighbor (K=5)
 
-<img src="/output/demo/Monster_KNeighborsClassifier.png" alt="\"Monster\" scatterplot" width="400" height="400"/>
+<img src="/output/demo/Monster_KNeighborsClassifier.png" alt="Monster scatterplot" width="400" height="400"/>
 
 ### Unsupervised Learning
 
