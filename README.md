@@ -24,6 +24,10 @@ This project created a foundation for future work by WPI students in music infor
       -c, --is_cluster      Run clustering.
       -e, --is_elbow        Run elbow method for KMeans clustering.
     
+### TODO
+
+* Run anomaly detection before K-means to reduce outlier effects
+* Segment song and smooth to isolate Verse, Chorus sections
 
 ## The End Result
 
@@ -48,4 +52,6 @@ K-nearest neighbor (K=5)
 
 K-means clustering algorithm:
 
-<img src="/output/demo/kmeans_monster.png" alt="K-means on \"Confutatis\"" width="400" height="400"/>
+<img src="/output/demo/kmeans_monster.png" alt="K-means on Monster" width="400" height="400"/>
+
+
