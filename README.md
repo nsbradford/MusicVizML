@@ -1,6 +1,10 @@
-# Musical Machine Learning
+# MusicML / Viz
 
 This project created a foundation for future work by WPI students in music information retrieval and machine learning. A Python system was first constructed to extract variable-length features from audio files. The problem of determining song structure was then approached with both supervised and unsupervised learning algorithms.
+
+Mostly though, this is notable just producing some nice-looking visualizations of songs as a by-product of running K-means under certain conditions (here is "One" by Metallica):
+
+<img src="/output/demo/art.jpg" alt="Monster scatterplot" width="900" height="550"/>
 
 ### Installation
 
@@ -47,9 +51,7 @@ Full usage:
 
 ## The End Result
 
-Song Visualization of "One" by Metallica.
 
-<img src="/output/demo/art.jpg" alt="Monster scatterplot" width="1280" height="800"/>
 
 
 ## Workflow
