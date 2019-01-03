@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 # working with data
 from sklearn.preprocessing import StandardScaler
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 
 # machine learning algorithms
 from sklearn.neighbors import KNeighborsClassifier
@@ -35,18 +35,18 @@ from cluster import run_clustering_test, calculate_elbow_method
 class Analyst(object):
 
     song_library = [
-        library.monster,
-        library.howyouloveme,
-        library.feelgood,
-        library.confutatis,
+        # library.monster,
+        # library.howyouloveme,
+        # library.feelgood,
+        # library.confutatis,
         library.one,
-        library.champions, #5
-        library.remember,
-        library.rock_v_classical,
-        library.pop_v_classical,
-        library.pop_v_rock_choruses,
-        library.rap_v_classical, #10
-        library.entire_monster_v_confutatis
+        # library.champions, #5
+        # library.remember,
+        # library.rock_v_classical,
+        # library.pop_v_classical,
+        # library.pop_v_rock_choruses,
+        # library.rap_v_classical, #10
+        # library.entire_monster_v_confutatis
     ]
 
     algo_classes = [
@@ -68,7 +68,7 @@ class Analyst(object):
     #==================================================================================================
 
     @staticmethod
-    def primary_function(   song_index, algo, n_art_graphs=1, n_test_runs=100, is_plot_data=False, 
+    def primary_function(   song_index, algo, n_art_graphs=1, n_test_runs=1, is_plot_data=False, 
                             is_graph=False, is_cluster=False, is_elbow=False):
         """ """
         

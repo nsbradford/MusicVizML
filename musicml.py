@@ -117,7 +117,7 @@ def main():
             help='Number of output graphs.')
     parser.add_argument('-p', '--is_plot_data', action='store_true',
             help='Plot the raw data.')
-    parser.add_argument('-g', '--is_graph', action='store_true',
+    parser.add_argument('-g', '--is_not_graph', action='store_false',
             help='Graph output.')
     parser.add_argument('-c', '--is_cluster', action='store_true',
             help='Run clustering.')
@@ -138,7 +138,7 @@ def main():
                                     n_art_graphs=args.n_art_graphs,
                                     n_test_runs=100,
                                     is_plot_data=args.is_plot_data,
-                                    is_graph=args.is_graph,
+                                    is_graph=not args.is_not_graph,
                                     is_cluster=args.is_cluster,
                                     is_elbow=args.is_elbow)
 

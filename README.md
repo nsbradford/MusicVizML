@@ -24,10 +24,12 @@ This project created a foundation for future work by WPI students in music infor
       -c, --is_cluster      Run clustering.
       -e, --is_elbow        Run elbow method for KMeans clustering.
     
-### TODO
+### Things to do in the future
 
+* Refactor to run in a Jupyter notebook
+* Segment song and smooth to isolate Verse, Chorus sections (i.e. that way you don't have to manually specify choruses and verses in the configs)
 * Run anomaly detection before K-means to reduce outlier effects
-* Segment song and smooth to isolate Verse, Chorus sections
+
 
 ## The End Result
 

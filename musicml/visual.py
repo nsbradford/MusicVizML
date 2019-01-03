@@ -82,7 +82,7 @@ def plot_classification(song_name, clf, X_train, y_train, X_test, y_test, X, y, 
         PiYG_r, YlGn_r, Blues_r, YlOrBr_r, seismic, Purples, seismic_r, RdBu, Greys,
         BuGn_r, YlOrRd, PuOr, PuBuGn, nipy_spectral, afmhot"""
     #color_maps = "".join(color_maps_raw.split()).split(',')
-    color_maps = ['gray', 'PuBu'] #['RdBu','gray', 'pink', 'PuBu', 'Reds', 'RdGy', 'Purples']
+    color_maps = ['Blues'] #['RdBu','gray', 'pink', 'PuBu', 'Reds', 'RdGy', 'Purples']
 
     print "Plot classification..."
     size = 5
@@ -145,6 +145,8 @@ def plot_classification(song_name, clf, X_train, y_train, X_test, y_test, X, y, 
         print "\tSaving figure..."
 
         # dpi=1200 svg for high-quality
-        plt.savefig('output/' + title  + '.png', bbox_inches='tight', format='png', dpi=1200) 
+        viz_filename = 'output/' + title  + '.png'
+        print 'Exporting visualization to \"' + viz_filename + '\" ...'
+        plt.savefig(viz_filename, bbox_inches='tight', format='png', dpi=1200) 
         #plt.cla()
         #plt.show()
