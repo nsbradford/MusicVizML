@@ -141,6 +141,7 @@ def main():
                                     is_graph=not args.is_not_graph,
                                     is_cluster=args.is_cluster,
                                     is_elbow=args.is_elbow)
+    print("MusicML completed successfully.")
 
 #==================================================================================================
 

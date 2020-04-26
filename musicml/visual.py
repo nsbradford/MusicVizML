@@ -87,7 +87,7 @@ def plot_classification(song_name, clf, X_train, y_train, X_test, y_test, X, y, 
     print "Plot classification..."
     size = 5
     alpha = 1.0
-    linewidth = 0.01
+    linewidth = 0.0 #0.01
 
     h = .01
     x_min, x_max = X[:, 0].min() - .5, X[:, 0].max() + .5

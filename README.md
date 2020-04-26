@@ -12,7 +12,7 @@ Optionally use virtualenv, and install requirements:
 
 Demo, which loads up the song "One" and produces a visualization similar to the below:
 
-    $ python musicml.py
+    $ python musicml.py -g
 
 Full usage:
     

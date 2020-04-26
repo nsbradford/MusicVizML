@@ -39,6 +39,7 @@ class Analyst(object):
         # library.howyouloveme,
         # library.feelgood,
         # library.confutatis,
+        # library.sweetdreams,
         library.one,
         # library.champions, #5
         # library.remember,
@@ -71,7 +72,7 @@ class Analyst(object):
     def primary_function(   song_index, algo, n_art_graphs=1, n_test_runs=1, is_plot_data=False, 
                             is_graph=False, is_cluster=False, is_elbow=False):
         """ """
-        
+        print("Starting analysis with graph" + str(is_graph))
         song = Analyst.song_library[song_index]
 
         print "\n======================================================"
@@ -89,6 +90,8 @@ class Analyst(object):
             if is_plot_data:
                 print "Plotting training/test data..."
                 scatterplot(verses_features, chorus_features)
+            else:
+                print("Did not want data to be plotted, skipping.")
 
             result = Analyst.run_test(song.name, algo, verses_features, chorus_features, 
                 n_art_graphs, n_test_runs, is_plot_data, is_graph, is_cluster, is_elbow)
@@ -137,5 +140,9 @@ class Analyst(object):
 
         print "Average performance:", np.mean(results)
         if is_graph:
+            print("Showing graph...")
             plt.show()
+            print("Showing graph done.")
+        else:
+            print("Did not want graph to show, skipping.")
         return np.mean(results)

@@ -13,6 +13,14 @@ from songs import Song, SongComparison
 # Songs       
 
 #================================================
+sweetdreams_verses = [
+    (0, 63)
+]
+sweetdreams_chorus = [
+    (64, 95)
+]
+
+#================================================
 monster_verses = [
     (0, 14)
 ]
@@ -110,6 +118,10 @@ entire_monster = [(0, 173)]
 #==================================================================================================
 # Complete Song data
 
+
+sweetdreams = Song('sweetdreams', 'input/sweetdreams.wav', 
+    verses=sweetdreams_verses, 
+    chorus=sweetdreams_chorus)
 monster = Song('Monster', 'input/monster.wav', 
     verses=monster_verses, 
     chorus=monster_chorus)
