@@ -10,7 +10,7 @@ librosa==0.6.2
 llvmlite==0.27.0
 matplotlib==2.2.3
 numba==0.42.0
-numpy==1.15.4
+numpy==1.22.0
 pyparsing==2.3.0
 python-dateutil==2.7.5
 pytz==2018.7
